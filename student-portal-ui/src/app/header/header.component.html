@@ -1,0 +1,14 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a href="https://www.javainuse.com" class="navbar-brand">Student Portal</a></div>
+
+    <ul class="navbar-nav">
+
+      <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/students" class="nav-link">View Students</a></li>
+      <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/addStudent" class="nav-link">Add New Student</a></li>
+      <li><a *ngIf="!authService.isUserLoggedIn()" routerLink="/login" class="nav-link float-left">Login</a></li>
+      <li><a *ngIf="authService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Log out</a></li>
+
+    </ul>
+  </nav>
+</header>
